@@ -44,7 +44,7 @@ public class ClimbLadder : MonoBehaviour {
     {
         if (collider.gameObject.tag == "ladder")
         {
-            rb2d.gravityScale = 2.0f;
+            rb2d.gravityScale = 2.5f;
             player.grounded = true;
             player.canDoubleJump = true;
             Debug.Log("Trigger Exit.");

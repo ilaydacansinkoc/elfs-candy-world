@@ -12,7 +12,7 @@ public class Player : MonoBehaviour {
     private float movSpeed;
 
     public float jumpPower = 100f;
-    private bool canDoubleJump=false;
+    public bool canDoubleJump=false;
     public bool grounded;
 
 	// Use this for initialization
@@ -57,5 +57,20 @@ public class Player : MonoBehaviour {
             }
         }
 
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if(other.gameObject.tag == "nyan")
+        {
+            transform.parent = other.transform;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "nyan")
+        {
+            transform.parent = null;
+        }
     }
 }

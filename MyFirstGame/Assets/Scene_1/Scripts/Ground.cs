@@ -22,15 +22,28 @@ public class Ground : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D collider)
     {
         player.grounded = true;
+        if (collider.gameObject.tag == "ladder")
+        {
+            player.grounded = true;
+        }
 
     }
     void OnTriggerStay2D(Collider2D collider)
     {
         player.grounded = true;
+        if (collider.gameObject.tag == "ladder")
+        {
+            player.grounded = false;
+        }
 
     }
     void OnTriggerExit2D(Collider2D collider)
     {
+        if (collider.gameObject.tag == "ladder")
+        {
+            player.grounded = true;
+        }
         player.grounded = false;
+
     }
 }

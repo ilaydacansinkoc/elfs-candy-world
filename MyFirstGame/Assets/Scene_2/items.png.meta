@@ -1,17 +1,13 @@
 fileFormatVersion: 2
-guid: 133f0c254f1f1ba429e4f08f21ac1ff8
-timeCreated: 1500061755
+guid: 413def606e773b540a3879eb1294af75
+timeCreated: 1500236621
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: elf_regular_hair_0
-    21300002: elf_regular_hair_1
-    21300004: elf_regular_hair_2
-    21300006: elf_regular_hair_3
-    21300008: elf_regular_hair_4
-    21300010: elf_regular_hair_5
-    21300012: elf_regular_hair_6
-    21300014: elf_regular_hair_7
+    21300000: items_0
+    21300002: items_1
+    21300004: items_2
+    21300006: items_3
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -94,104 +90,52 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: elf_regular_hair_0
+      name: items_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 21
-        width: 11
-        height: 12
+        x: 5
+        y: 36
+        width: 5
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: elf_regular_hair_1
+      name: items_1
       rect:
         serializedVersion: 2
-        x: 24
-        y: 22
-        width: 11
-        height: 12
+        x: 21
+        y: 36
+        width: 5
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: elf_regular_hair_2
+      name: items_2
       rect:
         serializedVersion: 2
-        x: 44
-        y: 22
-        width: 11
-        height: 12
+        x: 38
+        y: 36
+        width: 3
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: elf_regular_hair_3
+      name: items_3
       rect:
         serializedVersion: 2
-        x: 63
-        y: 21
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: elf_regular_hair_4
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 21
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: elf_regular_hair_5
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 21
-        width: 10
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: elf_regular_hair_6
-      rect:
-        serializedVersion: 2
-        x: 123
-        y: 21
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: elf_regular_hair_7
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 21
-        width: 11
-        height: 12
+        x: 56
+        y: 36
+        width: 1
+        height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
