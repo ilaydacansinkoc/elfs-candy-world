@@ -10,16 +10,27 @@ public class Player : MonoBehaviour {
 
     [SerializeField]
     private float movSpeed;
+    
+
+    private AudioSource source_1;
+    private AudioSource source_2;
+    private AudioSource[] audioSources;
+
 
     public float jumpPower = 100f;
     public bool canDoubleJump=false;
     public bool grounded;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         Debug.Log("I am alive.");
         anim = gameObject.GetComponent<Animator>();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
+
+        audioSources = GetComponents<AudioSource>();
+        source_1 = audioSources[0];
+        source_2 = audioSources[1];
+
 	}
 	
 	// Update is called once per frame
@@ -43,6 +54,7 @@ public class Player : MonoBehaviour {
             if (grounded)
             {
                 rb2d.AddForce(Vector2.up * jumpPower);
+                source_1.Play();
                 canDoubleJump = true;
             }
 
@@ -53,10 +65,21 @@ public class Player : MonoBehaviour {
                     canDoubleJump = false;
                     rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
                     rb2d.AddForce(Vector2.up * jumpPower);
+                    source_1.Play();
                 }
             }
         }
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "coin" || collision.gameObject.tag=="candy")
+        {
+            
+            Destroy(collision.gameObject);
+            source_2.Play();
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -73,4 +96,6 @@ public class Player : MonoBehaviour {
             transform.parent = null;
         }
     }
+
+    
 }
