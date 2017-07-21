@@ -6,7 +6,6 @@ public class Bird : MonoBehaviour
 {
 
     private Transform trans;
-    private Rigidbody2D rb2d;
     static float t = 0.0f;
     public float minimum;
     public float maximum;
@@ -15,7 +14,6 @@ public class Bird : MonoBehaviour
     void Start()
     {
         trans = gameObject.GetComponent<Transform>();
-        rb2d = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame

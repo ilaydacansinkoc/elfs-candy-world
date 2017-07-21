@@ -14,6 +14,7 @@ public class Player : MonoBehaviour {
 
     private AudioSource source_1;
     private AudioSource source_2;
+    private AudioSource source_3;
     private AudioSource[] audioSources;
 
 
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour {
         audioSources = GetComponents<AudioSource>();
         source_1 = audioSources[0];
         source_2 = audioSources[1];
+        source_3 = audioSources[2];
 
 	}
 	
@@ -80,18 +82,31 @@ public class Player : MonoBehaviour {
             Destroy(collision.gameObject);
             source_2.Play();
         }
+
+        if(collision.gameObject.tag == "star")
+        {
+            Destroy(collision.gameObject);
+            source_3.Play();
+        }
+
+        if(collision.gameObject.tag == "door")
+        {
+            Application.LoadLevel("Scene_3");
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if(other.gameObject.tag == "nyan")
+        if ( (other.gameObject.tag == "nyan") || (other.gameObject.tag == "bird") || (other.gameObject.tag == "cloud"))
         {
             transform.parent = other.transform;
         }
+
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "nyan")
+        if ((collision.gameObject.tag == "nyan") || (collision.gameObject.tag == "bird") ||(collision.gameObject.tag == "cloud"))
         {
             transform.parent = null;
         }
