@@ -5,6 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - candy
+  - SceneCollider
+  - ladder
+  - nyan
+  - coin
+  - star
+  - bird
+  - cloud
+  - door_1
+  - door_2
+  - bottom_collider
+  - lava
   layers:
   - Default
   - TransparentFX
